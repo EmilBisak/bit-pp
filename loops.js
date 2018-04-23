@@ -212,19 +212,48 @@ console.log("sum =", sum);
 
 // zadatak 7 
 
-var grades = [80, 77, 88, 95, 68];
-var names = ["David", "Marko", "Dany", "John", "Thomas"];
+// var grades = [80, 77, 88, 95, 68];
+// var names = ["David", "Marko", "Dany", "John", "Thomas"];
 
-for (let i = 0; i < grades.length; i++) {
-    if (grades[i] <= 60) {
-        console.log(names[i] + " : F");
-    } else if (grades[i] <= 70) {
-        console.log(names[i] + " : D");
-    } else if (grades[i] <= 80) {
-        console.log(names[i] + " : C");
-    } else if (grades[i] <= 90) {
-        console.log(names[i] + " : B");
-    } else if (grades[i] == 100) {
-        console.log(names[i] + " : A");
-    }
+// for (let i = 0; i < grades.length; i++) {
+//     if (grades[i] <= 60) {
+//         console.log(names[i] + " : F");
+//     } else if (grades[i] <= 70) {
+//         console.log(names[i] + " : D");
+//     } else if (grades[i] <= 80) {
+//         console.log(names[i] + " : C");
+//     } else if (grades[i] <= 90) {
+//         console.log(names[i] + " : B");
+//     } else if (grades[i] <= 100) {
+//         console.log(names[i] + " : A");
+//     }
+// }
+
+
+
+
+var grades = [80, 77, 88, 95, 68];
+var totalGrades = 0;
+var avGrade = 0;
+var grade = 0;
+
+for (var i = 0; i < grades.length; i++) {
+    totalGrades += grades[i];
 }
+
+avGrade = totalGrades / grades.length;
+
+if (avGrade <= 60) {
+    grade = "F"
+} else if (avGrade <= 70) {
+    grade = "D"
+} else if (avGrade <= 80) {
+    grade = "C"
+} else if (avGrade <= 90) {
+    grade = "B"
+} else if (avGrade <= 100) {
+    grade = "A"
+}
+
+console.log("Average grade is " + grade);
+
