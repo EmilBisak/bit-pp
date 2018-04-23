@@ -113,12 +113,9 @@
 var nums = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 var sum = 0;
 for (let i = 0; i < nums.length; i++) {
-    sum += nums[i]
-
-    if (i > 3) {
-        console.log("Stop iteration");
-        break;
+    if (i === 2 || i === 6) { //da preskocimo iteraciju
+        continue;
     }
-
+    sum += nums[i]
 }
 console.log(sum);
