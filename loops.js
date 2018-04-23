@@ -173,7 +173,7 @@
 // var singleString = '';
 
 // for (let i = 0; i < x.length; i++) {
-    
+
 //     singleString += " " + x[i];
 // }
 // console.log(singleString);
@@ -196,7 +196,7 @@
 
 
 //zadatak 6
-var x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+var x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 var squ = 0;
 var sum = 0;
 
@@ -206,7 +206,25 @@ for (var i = 0; i < x.length; i++) {
     console.log(squ);
 }
 
-console.log("sum =",sum);
+console.log("sum =", sum);
 
 
 
+// zadatak 7 
+
+var grades = [80, 77, 88, 95, 68];
+var names = ["David", "Marko", "Dany", "John", "Thomas"];
+
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] <= 60) {
+        console.log(names[i] + " : F");
+    } else if (grades[i] <= 70) {
+        console.log(names[i] + " : D");
+    } else if (grades[i] <= 80) {
+        console.log(names[i] + " : C");
+    } else if (grades[i] <= 90) {
+        console.log(names[i] + " : B");
+    } else if (grades[i] == 100) {
+        console.log(names[i] + " : A");
+    }
+}
