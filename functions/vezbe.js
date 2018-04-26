@@ -50,20 +50,94 @@
 
 // Zadatak 5
 
-// function drawSquare(num) {
-//     var string = "";
-//     for (var i = 0; i < num; i++) {
-//         string += "*";
-//         for(var j = 0; j < num; j++) {
-//             string2 += "*\t";
-            
-//         }
-        
-        
-//     }
+
+// function funcA(a) {
+//     funcB(a);
 // }
 
-// drawSquare(5);
+// function funcB(b) {
+//     console.log(b)
+// }
+
+// funcA("neki tekst");
+
+function printFullLine(dimension, character) {
+    var line = "";
+
+    for (var i = 0; i < dimension; i++) {
+        line += character + " ";
+    }
+
+    console.log(line);
+}
+
+function printEdgeLine(dimension, character) {
+    var line = "";
+
+    for (var i = 0; i < dimension; i++) {
+        if (i === 0 || i === dimension - 1) {
+            line += character + " ";
+        } else {
+            line += "  ";
+        }
+    }
+
+    console.log(line);
+}
+
+function drawSquare(dimension, char) {
+    for (var i = 0; i < dimension; i++) {
+        if (i === 0 || i === dimension - 1) {
+            printFullLine(dimension, char);
+        } else {
+            printEdgeLine(dimension, char);
+        }
+    }
+}
+
+drawSquare(9, "-");
+
+
+
+
+//zadatak 6
+
+
+function firstLine(a, char) {
+    var line = "";
+    for (var i = 0; i < a; i++) {
+        line += char + " ";
+    }
+    console.log(line);
+}
+
+function secondLine(b, char) {
+    var line = "";
+    for (var i = 0; i < b; i++) {
+        line += char + " ";
+    }
+    console.log(line);
+}
+
+function thirdLine(c, char) {
+    var line = "";
+    for (var i = 0; i < c; i++) {
+        line += char + " ";
+    }
+    console.log(line);
+}
+
+
+function printLines(a, b, c, char) {
+    firstLine(a, char);
+    secondLine(b, char);
+    thirdLine(c, char);
+}
+
+
+printLines(4, 5, 8, "+");
+
+
 
 
 // Zadatak 7
